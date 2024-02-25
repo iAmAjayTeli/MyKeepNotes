@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UpdatesFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardView2"
+        android:elevation="8dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etNotesTitle"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:hint="Type Your Title"
+                android:textSize="22sp"
+                android:fontFamily="@font/allerta"
+                android:textColorHint="#CD000000"
+                android:ems="10"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etNotesBody"
+                android:hint="Type Something"
+                android:gravity="start"
+                android:background="@android:color/transparent"
+                android:textColorHint="#2f6882"
+                />
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateFloatingBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+       android:backgroundTint="#E0C3E8"
+        android:src="@drawable/done"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="floatingBtn" />
+
+</RelativeLayout>
+</layout>

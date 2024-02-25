@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homefragment">
+
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.example.mykeepnotes.fragments.homeFragment"
+        android:label="fragment_homefragment"
+        tools:layout="@layout/fragment_homefragment" >
+        <action
+            android:id="@+id/action_homefragment_to_addNotesFragment"
+            app:destination="@id/addNotesFragment" />
+        <action
+            android:id="@+id/action_homefragment_to_updatesFragment"
+            app:destination="@id/updatesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNotesFragment"
+        android:name="com.example.mykeepnotes.fragments.AddNotesFragment"
+        android:label="fragment_add_notes"
+        tools:layout="@layout/fragment_add_notes" >
+        <action
+            android:id="@+id/action_addNotesFragment_to_homefragment"
+            app:destination="@id/homefragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatesFragment"
+        android:name="com.example.mykeepnotes.fragments.UpdatesFragment"
+        android:label="fragment_updates"
+        tools:layout="@layout/fragment_updates">
+        <action
+            android:id="@+id/action_updatesFragment_to_homefragment"
+            app:destination="@id/homefragment" />
+
+        <argument
+            android:name="notes"
+            app:argType="com.example.mykeepnotes.model.Notes"
+            app:nullable="true"/>
+
+    </fragment>
+
+</navigation>
